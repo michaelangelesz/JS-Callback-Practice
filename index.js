@@ -2,6 +2,7 @@ const inventory = newInventory()
 move(inventory).to(0, 0)
 
 const character = newImage('assets/green-character/static.gif')
+let direction = null; //create direction variable
 move(character).to(100, 250)
 
 
