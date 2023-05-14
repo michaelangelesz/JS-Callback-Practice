@@ -3,6 +3,8 @@ move(inventory).to(0, 0)
 
 const character = newImage('assets/green-character/static.gif')
 let direction = null; //create direction variable
+let x = 100; //create x variable to track horizontal position
+let y = 250; //create y variable to track vertical position
 move(character).to(100, 250)
 
 
