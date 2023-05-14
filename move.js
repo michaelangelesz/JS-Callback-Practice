@@ -12,8 +12,11 @@ function move(element) {
 }
 
 //add event listener for keydown (user presses an arrow key)
-document.addEventListener('keydown', function(e){                
-    //add functionality to update direction variable based on the arrow key pressed. if user presses the left arrow, our character moves west, and so on
+document.addEventListener('keydown', function(e){     
+    //ensures that the direction variable is updated only once per arrow key press, and not continuously if the user holds down the key  
+    if(e.repeat) return;
+
+    //adds functionality to update direction variable based on the arrow key pressed. if user presses the left arrow, our character moves west, and so on
     if(e.key === 'ArrowLeft'){
         direction = 'west'
     }
