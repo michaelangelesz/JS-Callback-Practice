@@ -4,7 +4,7 @@ move(inventory).to(0, 0)
 const character = newImage('assets/green-character/static.gif')
 
 //add callback function that will be executed each time the direction variable of our green character changes
-function handleDirectionChange(){
+function handleDirectionChange(direction){
     //modifies the character's image when it changes direction so it appears to walk by checking the value of the direction variable (which key pressed) and changes the source of the character image accordingly
     if(direction === null){
         character.src = 'assets/green-character/static.gif'

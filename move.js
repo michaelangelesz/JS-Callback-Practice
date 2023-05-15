@@ -59,13 +59,17 @@ function move(element) {
             if(e.key === 'ArrowDown'){
                 direction = 'south'
             }
-            callback() //calling the callback where we change the direction variable
+            //calling the callback where we change the direction variable
+            //pass direction as an argument since direction is in scope where handleDirectionChange is called but not where it is defined
+            callback(direction) 
         })
 
         //add a keyup event listener to allow our character to move with the arrow keys intuitively (essentially makes him stop moving forever in the same direction even after keyup)
         document.addEventListener('keyup', function(e){
             direction = null
-            callback() //calling the callback where we change the direction variable
+            //calling the callback where we change the direction variable
+            //pass direction as an argument since direction is in scope where handleDirectionChange is called but not where it is defined
+            callback(direction) 
         })
     }
     
