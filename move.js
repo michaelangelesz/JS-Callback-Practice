@@ -6,7 +6,7 @@ function move(element) {
         element.style.bottom = bottom + 'px'
     }
 
-    //defines new function that will be used to implement the same functionality for other elements 
+    //defines function that will be used to implement the movement functionality for elements 
     function moveWithArrowKeys(left, bottom){
         let direction = null;
         let x = left;
