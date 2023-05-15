@@ -5,6 +5,7 @@ const character = newImage('assets/green-character/static.gif')
 //moves character element on the screen by calling the move function with the character element as its argument
 move(character).withArrowKeys(100, 250)
 
+//in the following lines, the .to can be replaced with .withArrowKeys (as in line example above) to give each element the same movement functionality as our green character. 
 move(newImage('assets/tree.png')).to(200, 450)
 move(newImage('assets/pillar.png')).to(350, 250)
 move(newImage('assets/pine-tree.png')).to(450, 350)
