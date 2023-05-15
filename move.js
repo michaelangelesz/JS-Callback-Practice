@@ -6,10 +6,18 @@ function move(element) {
         element.style.bottom = bottom + 'px'
     }
 
-    return {
-        to: moveToCoordinates
+    //defines new function that will be used to implement the same functionality for other elements 
+    function moveWithArrowKeys(left, bottom){
+       
     }
+
+    return {
+        to: moveToCoordinates,
+        //attaches new function called withArrowKeys to the object returned by the move function
+        withArrowKeys: moveWithArrowKeys
+    }        
 }
+
 
 //add event listener for keydown (user presses an arrow key)
 document.addEventListener('keydown', function(e){     
@@ -31,3 +39,7 @@ document.addEventListener('keydown', function(e){
     }
 })
 
+//add a keyup event listener to allow our character to move with the arrow keys intuitively (essentially makes him stop moving forever in the same direction even after keyup)
+document.addEventListener('keyup', function(e){
+    direction = null
+})
